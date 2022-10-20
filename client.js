@@ -32,15 +32,6 @@ const connect = () => {
   conn.on("connect", () => {
     console.log('Connected to server');
     conn.write(`Name: SYF`);
-    /* for (let i = 0; i < 10; i++) {
-      setTimeout(() => {
-        conn.write("Move: up");
-      }, 200 * i);
-    } */
-    /* setInterval(() => {
-      conn.write("Move: up");
-    }, 500); */
-    
   });
 
   conn.on("data", (serverData) => {
