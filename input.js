@@ -1,3 +1,5 @@
+const {HI, WHAT, OK, BYE, MOVE} = require('./constants');
+
 let connection;
 
 const setupInput = (conn) => {
@@ -10,21 +12,21 @@ const setupInput = (conn) => {
     if (key === '\u0003') {
       process.exit();
     } else if (key === 'w') {
-      connection.write('Move: up');
+      connection.write(MOVE.w);
     } else if (key === 'a') {
-      connection.write('Move: left');
+      connection.write(MOVE.a);
     } else if (key === 's') {
-      connection.write('Move: down');
+      connection.write(MOVE.s);
     } else if (key === 'd') {
-      connection.write('Move: right');
+      connection.write(MOVE.d);
     } else if (key === 'h') {
-      connection.write('Say: Hi');
+      connection.write(HI);
     } else if (key === 'j') {
-      connection.write('Say: What\'s up');
+      connection.write(WHAT);
     } else if (key === 'k') {
-      connection.write('Say: Ok');
+      connection.write(OK);
     } else if (key === 'l') {
-      connection.write('Say: Bye~');
+      connection.write(BYE);
     }
   });
   return stdin;
