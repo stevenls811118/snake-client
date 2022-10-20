@@ -22,6 +22,8 @@ const connect = () => {
 
   console.log("Connecting...");
 
+  let name = 'Syf';
+
   const conn = net.createConnection({
     host: "localhost",
     port: 50541
@@ -31,7 +33,7 @@ const connect = () => {
 
   conn.on("connect", () => {
     console.log('Connected to server');
-    conn.write(`Name: SYF`);
+    conn.write(`Name: ${name}`);
   });
 
   conn.on("data", (serverData) => {
