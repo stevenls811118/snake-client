@@ -37,21 +37,10 @@ const connect = () => {
         conn.write("Move: up");
       }, 200 * i);
     } */
-    setInterval(() => {
+    /* setInterval(() => {
       conn.write("Move: up");
-    }, 500);
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 500);
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 500);
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 500);
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 500);
+    }, 500); */
+    
   });
 
   conn.on("data", (serverData) => {
