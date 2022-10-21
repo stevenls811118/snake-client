@@ -12,6 +12,7 @@ const connect = () => {
 
   conn.setEncoding("utf8");
 
+  // send the name to the server when connect
   conn.on("connect", () => {
     console.log('Connected to server');
     conn.write(`Name: ${NAME}`);
@@ -20,7 +21,6 @@ const connect = () => {
   conn.on("data", (serverData) => {
     console.log(serverData);
   });
-  
   
   return conn;
 };
